@@ -1,73 +1,55 @@
+
+<html lang="en">
 <head>
-    <style>
-        body{
-            background-color:antiquewhite;
-        }
-
-/* CSS */
-.button-40 {
-  background-color: #111827;
-  border: 1px solid transparent;
-  border-radius: .75rem;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  flex: 0 0 auto;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.5rem;
-  padding: .75rem 1.2rem;
-  text-align: center;
-  text-decoration: none #6B7280 solid;
-  text-decoration-thickness: auto;
-  transition-duration: .2s;
-  transition-property: background-color,border-color,color,fill,stroke;
-  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-}
-
-.button-40:hover {
-  background-color: #374151;
-}
-
-.button-40:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-@media (min-width: 768px) {
-  .button-40 {
-    padding: .75rem 1.5rem;
-  }
-}
-        h3{
-          text-align: center;  
-          transform: translateY(80%);
-        }
-        h1{
-          text-align: center;  
-        }
-        a{
-          z-index: 5000000000000;
-          font-size: 32px;
-          color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kardna</title>
+  <link rel="stylesheet" href="https://use.typekit.net/rnz2bks.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		
 </head>
 <body>
   
-  <link rel="stylesheet" href="./style.css">
-  <canvas id="canvas"></canvas>
-  <script type="module" src="./script.js"></script>
-
-    <a href="#">A:B</a>
+</body>
+</html>
+<head>
+    <style>
+      @font-face {
+    font-family: A;
+    src: url(AE.otf);
+}
+        body{
+          font-family: A;
+            background-color:antiquewhite;
+        }
+        .ab{
+          z-index: 999;
+          color: black;
+          font-size: 32px;
+        }
+        #gamebtn{
+          position: fixed;
+          bottom: 45%;
+          right: 15%;
+          width: 200px;
+        }
+        #appsbtn{
+          position: fixed;
+          bottom: 45%;
+          left: 15%;
+          width: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+  <br>
+  <a class="ab"href="#">Full Screen</a>
+  <button id="gamebtn"class="button button--pan" onclick="location.href='./g.html'"><span>Games</span></button>
+  <button id="appsbtn"class="button button--pan" onclick="location.href='../apps.html'"><span>Apps</span></button>
+  <iframe id="MyFrame" src="./bg.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;"></iframe>
     <script>
       var urlObj = new window.URL(window.location.href); var url = "https://kardna-v2.herokuapp.com/games/"; if (url) { var win; document.querySelector('a').onclick = function() { if (win) { win.focus(); } else { win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var iframe = win.document.createElement('iframe'); iframe.style.border = 'none'; iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.margin = '0'; iframe.src = url; win.document.body.appendChild(iframe); } document.querySelector('a').style.background='#00000'; document.querySelector('a').innerHTML="Page Opened!"; }; } 
     </script>
-    <h3><button class="button-40" role="button" onclick="location.href='./gameframe.html'"><h2>Main Games</h2></button><br><br><button class="button-40" role="button" onclick="location.href='./gameframex.html'"><h2>Xbox Games</h2></button><br><br><button class="button-40" role="button"><h2>Play Station Games(SOON)</h2></button></h3>
   </body>
