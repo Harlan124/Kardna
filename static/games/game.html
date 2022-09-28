@@ -1,0 +1,68 @@
+<head>
+    <style>
+        body{
+            background-color:antiquewhite;
+        }
+
+/* CSS */
+.button-40 {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #374151;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
+        h3{
+          text-align: center;  
+          transform: translateY(80%);
+        }
+        h1{
+          text-align: center;  
+        }
+        a{
+          z-index: 5000000000000;
+          font-size: 32px;
+          color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">A:B</a>
+    <script>
+      var urlObj = new window.URL(window.location.href); var url = "https://kardna-v2.herokuapp.com/games/"; if (url) { var win; document.querySelector('a').onclick = function() { if (win) { win.focus(); } else { win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var iframe = win.document.createElement('iframe'); iframe.style.border = 'none'; iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.margin = '0'; iframe.src = url; win.document.body.appendChild(iframe); } document.querySelector('a').style.background='#00000'; document.querySelector('a').innerHTML="Page Opened!"; }; } 
+    </script>
+    <h3><button class="button-40" role="button" onclick="location.href='./gameframe.html'"><h2>Main Games</h2></button><br><br><button class="button-40" role="button" onclick="location.href='./gameframex.html'"><h2>Xbox Games</h2></button><br><br><button class="button-40" role="button"><h2>Play Station Games(SOON)</h2></button></h3>
+  </body>
