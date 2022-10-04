@@ -27,6 +27,7 @@
           z-index: 999;
           color: black;
           font-size: 32px;
+          text-align: right;
         }
         #gamebtn{
           position: fixed;
@@ -44,12 +45,11 @@
     </style>
 </head>
 <body>
-  <br>
   <a class="ab"href="#">Full Screen</a>
   <button id="gamebtn"class="button button--pan" onclick="location.href='./g.html'"><span>Games</span></button>
   <button id="appsbtn"class="button button--pan" onclick="location.href='../apps.html'"><span>Apps</span></button>
   <iframe id="MyFrame" src="./bg.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;"></iframe>
     <script>
-      var urlObj = new window.URL(window.location.href); var url = "https://kardna-v2.herokuapp.com/games/"; if (url) { var win; document.querySelector('a').onclick = function() { if (win) { win.focus(); } else { win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var iframe = win.document.createElement('iframe'); iframe.style.border = 'none'; iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.margin = '0'; iframe.src = url; win.document.body.appendChild(iframe); } document.querySelector('a').style.background='#00000'; document.querySelector('a').innerHTML="Page Opened!"; }; } 
+      var urlObj = new window.URL(window.location.href); var url = "https://kardna-v2.herokuapp.com/games/g.html"; if (url) { var win; document.querySelector('a').onclick = function() { if (win) { win.focus(); } else { win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var iframe = win.document.createElement('iframe'); iframe.style.border = 'none'; iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.margin = '0'; iframe.src = url; win.document.body.appendChild(iframe); } document.querySelector('a').style.background='#00000'; document.querySelector('a').innerHTML="Page Opened!"; }; } 
     </script>
   </body>
